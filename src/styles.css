@@ -9,8 +9,11 @@
 }
 
 .calc-wrapper {
-  width: 400px;
-  height: 600px;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 10px ridge  #878786;
 }
 
 .row {
