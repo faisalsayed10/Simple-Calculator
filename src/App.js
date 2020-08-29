@@ -9,6 +9,7 @@ export default function App({state, dispatch}) {
 
   return (
     <div className="App">
+      <h1>ReactJs Calculator</h1>
       <div className="calc-wrapper">
         <Input input={state}></Input>
         <div className="row">
