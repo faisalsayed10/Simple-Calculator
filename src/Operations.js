@@ -1,5 +1,7 @@
 import * as math from "mathjs";
 
+const operatorsArr = ['*', '/', '+', '-']
+
 const actions = {
   handleClear() {
     console.clear();
@@ -7,12 +9,15 @@ const actions = {
   },
 
   addtoInputNum(state, param) {
-    console.log(state, param);
-    return state + param;
+    if ((state[state.length - 1] === '-' && param === '-') || (operatorsArr.includes(state[state.length - 1]) && operatorsArr.includes(param))) {
+      return state;
+    } else {
+      return state + param;
+    }
   },
 
   addtoInputOpr(state, param) {
-    if (state === "") {
+    if (state === "" || (operatorsArr.includes(state[state.length - 1]) && operatorsArr.includes(param))) {
       return state;
     } else {
       return state + param;
@@ -58,6 +63,5 @@ const actions = {
 export default function reducer(state, action) {
   let type = action.type;
   let param = action.param;
-  console.log(action);
   return actions[type](state, param);
 }

@@ -1,5 +1,24 @@
- .App {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.alert-div {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.refresh-btn {
+  width: 10em;
+  height: 3em;
+  outline: none;
+  background-color: cornflowerblue;
+  font-weight: 500;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.App {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -14,7 +33,7 @@
   height: auto;
   border-radius: 10px;
   overflow: hidden;
-  border: 10px ridge  #878786;
+  border: 10px ridge #878786;
 }
 
 .row {
@@ -25,4 +44,8 @@
 h1 {
   color: #878786;
   font-size: 35px;
+}
+
+h6 {
+  font-size: 12px;
 }
